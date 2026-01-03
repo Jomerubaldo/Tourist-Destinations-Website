@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Website</title>
+    <link rel="stylesheet" type="text/css" href="/frontend/style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-inside">
+        <!-- title page and logo image -->
+        <div id="container-logo">
+          <img src="/images/logo-removebg-preview.png" alt="logo" />
+          <h3 id="logo-name">Tourist Website</h3>
+        </div>
+
+        <!-- navigation bar -->
+        <nav>
+          <a href="#home" id="nav-home">Home</a>
+
+          <!-- for asia options-->
+          <select
+            class="nav-options"
+            onchange="location.href=this.value; event.target.selectedIndex=0;"
+          >
+            <option disabled selected hidden>Asia▾</option>
+            <option value="#philippines">Philippines</option>
+            <option value="#japan">Japan</option>
+            <option value="#china">China</option>
+          </select>
+
+          <!-- for europe options -->
+          <select
+            class="nav-options"
+            onchange="location.href=this.value; event.target.selectedIndex=0;"
+          >
+            <option disabled selected hidden>Europe▾</option>
+            <option value="#france">France</option>
+            <option value="#spain">Spain</option>
+            <option value="#italy">Italy</option>
+          </select>
+
+          <!-- for america options -->
+          <select
+            class="nav-options"
+            onchange="location.href=this.value; event.target.selectedIndex=0;"
+          >
+            <option disabled selected hidden>America▾</option>
+            <option value="#unitedstates">United States</option>
+            <option value="#canada">Canada</option>
+            <option value="#mexico">Mexico</option>
+          </select>
+        </nav>
+      </div>
+    </header>
+
+    <!-- hero section part -->
+    <!-- ayaw magpalagay ng id="philippines para sa navigation link section" -->
+    <section id="hero-section">
+      <div id="inside-hero-section">
+        <h1 id="hero-heading">Discover The World</h1>
+        <p id="hero-subheading">
+          Explore the world’s most amazing destinations — from Asia’s ancient
+          wonders, Europe’s historic charm, to America’s iconic cities and
+          breathtaking landscapes.
+        </p>
+        <a href="#contact" id="contact-me">Contact Me</a>
+      </div>
+      <img src="/images/logo.jpg" alt="hero-image" id="hero-image" />
+    </section>
+
+    <!-- main part -->
+    <main>
+      <!-- philippines section 1 -->
+      <section id="philippines" id="philippines-section">
+        <h1 id="philippines-title-section">Philippines</h1>
+        <div class="article-container">
+          <!-- article siargao island -->
+          <article class="article-content">
+            <a href="siargao.jpg">
+              <img
+                src="/images/siargao.jpg"
+                alt="Siargao Island"
+                class="article-image"
+              />
+            </a>
+            <h2>
+              <a
+                href="https://www.siargaoislands.com/"
+                target="_blank"
+                class="title-links"
+                >Siargao Island</a
+              >
+            </h2>
+            <p class="paragraph-content">
+              <strong>Siargao Island</strong>, often called the
+              <em>“Surfing Capital of the Philippines”</em>, is a tropical
+              paradise known for its <em>crystal-clear waters</em>,
+              <em>pristine beaches</em>, and
+              <strong>world-class surf breaks</strong>. Beyond surfing, visitors
+              can explore stunning <strong>lagoons</strong>, lush
+              <strong>coconut palms</strong>, and hidden caves, or enjoy
+              island-hopping adventures to nearby islets. With its laid-back
+              vibe, natural beauty, and vibrant local culture, Siargao offers
+              unforgettable getaway for adventure seekers and nature lovers
+              alike.
+            </p>
+          </article>
+
+          <!-- article boracay -->
+          <article class="article-content">
+            <a href="boracay.jpg">
+              <img
+                src="/images//boracay.jpg"
+                alt="Boracay Island"
+                class="article-image"
+              />
+            </a>
+            <h2>
+              <a
+                href="https://www.siargaoislands.com/"
+                target="_blank"
+                class="title-links"
+                >Boracay Island</a
+              >
+            </h2>
+            <p class="paragraph-content">
+              <strong>Boracay Island</strong> is a world-famous tropical
+              paradise known for its <em>powdery white sand beaches</em> and
+              <em>crystal-clear turquoise waters</em>. Visitors can enjoy a wide
+              range of activities, from water sports like
+              <strong>kiteboarding</strong> and <strong>snorkeling</strong> to
+              relaxing seaside strolls and vibrant nightlife. Its stunning
+              <em>sunsets</em>, luxurious <strong>resorts</strong>, and lively
+              atmosphere make Boracay a top destination for travelers seeking
+              both <em>adventure</em> and <em>relaxation</em> in the
+              Philippines.
+            </p>
+          </article>
+
+          <!-- article banaue rice terraces -->
+          <article class="article-content">
+            <a href="/images/banaue.jpg">
+              <img
+                src="/images//banaue.jpg"
+                alt="Banaue Rice Terraces"
+                class="article-image"
+              />
+            </a>
+            <h2>
+              <a
+                href="https://www.siargaoislands.com/"
+                target="_blank"
+                class="title-links"
+                >Banaue Rice Terraces</a
+              >
+            </h2>
+            <p class="paragraph-content">
+              The <strong>Banaue Rice Terraces</strong>, often called the
+              <em>“Eighth Wonder of the World”</em>, are an extraordinary
+              example of ancient engineering and cultural heritage. Carved into
+              the mountains of <strong>Ifugao</strong> over 2,000 years ago,
+              these terraces showcase the ingenuity and harmony of the
+              indigenous people with nature. Visitors can hike through the lush
+              terraces, learn about traditional <em>farming practices</em>, and
+              experience the breathtaking views of this
+              <strong>UNESCO World Heritage Site</strong>.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

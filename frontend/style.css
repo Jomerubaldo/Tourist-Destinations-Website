@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+}
+
+/* header part */
+
+#header-inside {
+  width: 1470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 6px;
+  margin-left: 0px;
+}
+
+img {
+  width: 70px;
+  height: 60px;
+}
+
+#logo-name {
+  color: #0f0e17;
+}
+
+/* navigation part */
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+#nav-home {
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 3px;
+  padding-right: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f0e17;
+}
+
+/* option part for asia europe and america */
+
+.nav-options {
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+}
+
+/* hero section part */
+
+#hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 779px;
+  padding: 0px 45px;
+  background-color: #14274e;
+  font-family: sans-serif;
+}
+
+#inside-hero-section {
+  max-width: 50%;
+  padding-bottom: 45px;
+}
+
+#hero-heading {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+
+#hero-subheading {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+#contact-me {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ffd700;
+  color: #0f0e17;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#hero-image {
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgb(225, 225, 225, 0.6), 0 0 60px rgb(225, 225, 225, 0.3),
+    0 0 100px rgb(225, 225, 225, 0.2);
+}
+
+/* main part */
+
+/* philippines section */
+#philippines-section {
+  background-color: #e0e0e0;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#philippines-title-section {
+  color: #333333;
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+.article-content {
+  width: 450px;
+}
+
+.article-image {
+  width: 450px;
+  height: 300px;
+  border: 2px solid black;
+}
+
+.title-links {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
