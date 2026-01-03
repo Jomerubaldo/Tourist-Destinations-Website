@@ -1,2 +1,2 @@
 # Tourist-Destinations-Website
-Creating Simple Tourist Website
+This project is a simple Tourist Website created as part of our Midterm Examination. It showcases popular tourist destinations across Asia, Europe, and America, providing brief descriptions and images for each location. The website is built using HTML with structured sections, navigation links, and smooth scrolling to enhance user experience. This project demonstrates the application of basic web development concepts, including page layout, navigation, and content organization, while presenting information in a visually engaging and easy-to-navigate format.
