@@ -1,2 +1,2 @@
-# -Tourist-Destinations-Website
+# Tourist-Destinations-Website
 Creating Simple Tourist Website
