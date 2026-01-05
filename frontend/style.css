@@ -152,15 +152,44 @@ nav {
   border: 2px solid black;
 }
 
-.title-links {
+.title-links-philippines {
   color: #006994;
   text-decoration: none;
 }
 
-.paragraph-content {
+.paragraph-content-philippines {
   text-align: justify;
   word-wrap: break-word;
   line-height: 1.6;
   min-height: 150px;
   color: #333333;
+}
+
+#japan-section {
+  background-color: #0f0e17;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#japan-title-section {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.title-links-japan {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-japan {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
 }
