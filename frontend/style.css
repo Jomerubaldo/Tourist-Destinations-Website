@@ -193,3 +193,77 @@ nav {
   min-height: 150px;
   color: #e0e0e0;
 }
+
+#china-section {
+  background-color: #e0e0e0;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#china-title-section {
+  color: #333333;
+  text-align: center;
+}
+
+.title-links-china {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-china {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+#france-section {
+  background-color: #0f0e17;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#france-title-section {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.title-links-france {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-fance {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+.paragraph-content-disneyland {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+.paragraph-content-louvre {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
