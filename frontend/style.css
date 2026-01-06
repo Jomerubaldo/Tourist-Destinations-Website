@@ -146,6 +146,7 @@ nav {
   width: 450px;
 }
 
+/* need nito ma change sa white para sa ibang part ng images bg */
 .article-image {
   width: 450px;
   height: 300px;
@@ -266,4 +267,33 @@ nav {
   line-height: 1.6;
   min-height: 150px;
   color: #e0e0e0;
+}
+
+#spain-section {
+  background-color: #e0e0e0;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#spain-title-section {
+  color: #333333;
+  text-align: center;
+}
+
+.title-links-spain {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-spain {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
 }
