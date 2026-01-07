@@ -147,10 +147,16 @@ nav {
 }
 
 /* need nito ma change sa white para sa ibang part ng images bg */
-.article-image {
+.article-image-black {
   width: 450px;
   height: 300px;
   border: 2px solid black;
+}
+
+.article-image-white {
+  width: 450px;
+  height: 300px;
+  border: 2px solid white;
 }
 
 .title-links-philippines {
@@ -296,4 +302,33 @@ nav {
   line-height: 1.6;
   min-height: 150px;
   color: #333333;
+}
+
+#italy-section {
+  background-color: #0f0e17;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#italy-title-section {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.title-links-italy {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-italy {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
 }
