@@ -332,3 +332,184 @@ nav {
   min-height: 150px;
   color: #e0e0e0;
 }
+
+#unitedstates-section {
+  background-color: #e0e0e0;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#unitedstates-title-section {
+  color: #333333;
+  text-align: center;
+}
+
+.title-links-statueofliberty {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-statueofliberty {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+.title-links-timesquare {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-timesquare {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+.title-links-sanfrancisco {
+  color: #006994;
+  text-decoration: none;
+}
+.paragraph-content-sanfrancisco {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+#canada-section {
+  background-color: #0f0e17;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#canada-title-section {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.title-links-niagarafalls {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-niagarafalls {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+.title-links-ripleysaquarium {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-ripleysaquarium {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+.title-links-whistler {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.paragraph-content-whistler {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+#mexico-section {
+  background-color: #e0e0e0;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#mexico-title-section {
+  color: #333333;
+  text-align: center;
+}
+
+.title-links-chichenitza {
+  color: #006994;
+  text-decoration: none;
+}
+.paragraph-content-chichenitza {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+.title-links-cancun {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-cancun {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+.title-links-museosoumaya {
+  color: #006994;
+  text-decoration: none;
+}
+
+.paragraph-content-museosoumaya {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #333333;
+}
+
+footer {
+  padding: 10px 80px;
+  border-top: 1px solid #d4cbc3;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #666;
+}
