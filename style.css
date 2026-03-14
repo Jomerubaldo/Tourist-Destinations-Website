@@ -1,7 +1,15 @@
+/* ══════════════════════════════════════════════
+   BASE RESET
+══════════════════════════════════════════════ */
 body {
   margin: 0;
+  overflow-x: hidden;
+  /* prevent horizontal scroll */
 }
 
+/* ══════════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════════ */
 header {
   position: fixed;
   display: flex;
@@ -11,23 +19,27 @@ header {
   width: 100%;
   height: 45px;
   background-color: #fff;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+  /* subtle shadow keeps it visible on scroll */
 }
 
-/* header part */
-
 #header-inside {
-  width: 1470px;
+  width: 100%;
+  /* was 1470px — now fully fluid */
+  max-width: 1470px;
+  padding: 0 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 #container-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 6px;
-  margin-left: 0px;
+  gap: 8px;
 }
 
 img {
@@ -37,13 +49,16 @@ img {
 
 #logo-name {
   color: #0f0e17;
+  white-space: nowrap;
 }
 
-/* navigation part */
-
+/* ── Navigation ── */
 nav {
   display: flex;
   gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  /* wrap on narrow screens */
 }
 
 #nav-home {
@@ -55,28 +70,35 @@ nav {
   color: #0f0e17;
 }
 
-/* option part for asia europe and america */
-
 .nav-options {
   font-size: 17px;
   border: none;
   background-color: transparent;
   appearance: none;
+  -webkit-appearance: none;
   text-align: center;
   width: 100px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* hero section part */
+/* ══════════════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════════════ */
+#home {
+  padding-top: 45px;
+  /* offset fixed header */
+}
 
 #hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 779px;
-  padding: 0px 45px;
+  min-height: 779px;
+  padding: 60px 45px;
   background-color: #14274e;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 #inside-hero-section {
@@ -112,82 +134,120 @@ nav {
   height: 620px;
   border-radius: 50%;
   box-shadow:
-    0 0 25px rgb(225, 225, 225, 0.6),
-    0 0 60px rgb(225, 225, 225, 0.3),
-    0 0 100px rgb(225, 225, 225, 0.2);
+    0 0 25px rgb(225, 225, 225, .6),
+    0 0 60px rgb(225, 225, 225, .3),
+    0 0 100px rgb(225, 225, 225, .2);
+  flex-shrink: 0;
 }
 
-/* main part */
-
-/* philippines section */
-#philippines-section {
-  background-color: #e0e0e0;
-  width: 100vw;
-  height: 800px;
+/* ══════════════════════════════════════════════
+   SECTION WRAPPERS  (shared pattern)
+══════════════════════════════════════════════ */
+#philippines-section,
+#japan-section,
+#china-section,
+#france-section,
+#spain-section,
+#italy-section,
+#unitedstates-section,
+#canada-section,
+#mexico-section {
+  width: 100%;
+  /* was 100vw which causes scrollbar bleed */
+  box-sizing: border-box;
+  min-height: 800px;
+  /* was fixed height — now min so it grows with content */
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
+  padding: 60px 20px;
 }
 
-#philippines-title-section {
+/* Light sections */
+#philippines-section,
+#china-section,
+#spain-section,
+#unitedstates-section,
+#mexico-section {
+  background-color: #e0e0e0;
+}
+
+/* Dark sections */
+#japan-section,
+#france-section,
+#italy-section,
+#canada-section {
+  background-color: #0f0e17;
+}
+
+/* Section headings */
+#philippines-title-section,
+#china-title-section,
+#spain-title-section,
+#unitedstates-title-section,
+#mexico-title-section {
   color: #333333;
   text-align: center;
 }
 
+#japan-title-section,
+#france-title-section,
+#italy-title-section,
+#canada-title-section {
+  color: #e0e0e0;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════════
+   ARTICLE GRID
+══════════════════════════════════════════════ */
 .article-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  flex-wrap: wrap;
+  /* wrap cards on smaller screens */
+  gap: 30px;
   padding: 20px;
+  width: 100%;
+  max-width: 1450px;
+  box-sizing: border-box;
 }
 
 .article-content {
   width: 450px;
+  max-width: 100%;
+  /* never overflow viewport */
+  flex-shrink: 1;
+  box-sizing: border-box;
 }
 
-/* need nito ma change sa white para sa ibang part ng images bg */
-.article-image-black {
-  width: 450px;
+/* Images */
+.article-image-black,
+.article-image-white {
+  width: 100%;
+  /* fluid inside the card */
+  max-width: 450px;
   height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-image-black {
   border: 2px solid black;
 }
 
 .article-image-white {
-  width: 450px;
-  height: 300px;
   border: 2px solid white;
 }
 
+/* ── Link colours (unchanged) ── */
 .title-links-philippines {
   color: #006994;
   text-decoration: none;
-}
-
-.paragraph-content-philippines {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
-#japan-section {
-  background-color: #0f0e17;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#japan-title-section {
-  color: #e0e0e0;
-  text-align: center;
 }
 
 .title-links-japan {
@@ -195,57 +255,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-japan {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-#china-section {
-  background-color: #e0e0e0;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#china-title-section {
-  color: #333333;
-  text-align: center;
-}
-
 .title-links-china {
   color: #006994;
   text-decoration: none;
-}
-
-.paragraph-content-china {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
-#france-section {
-  background-color: #0f0e17;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#france-title-section {
-  color: #e0e0e0;
-  text-align: center;
 }
 
 .title-links-france {
@@ -253,73 +265,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-fance {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-.paragraph-content-disneyland {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-.paragraph-content-louvre {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-#spain-section {
-  background-color: #e0e0e0;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#spain-title-section {
-  color: #333333;
-  text-align: center;
-}
-
 .title-links-spain {
   color: #006994;
   text-decoration: none;
-}
-
-.paragraph-content-spain {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
-#italy-section {
-  background-color: #0f0e17;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#italy-title-section {
-  color: #e0e0e0;
-  text-align: center;
 }
 
 .title-links-italy {
@@ -327,41 +275,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-italy {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-#unitedstates-section {
-  background-color: #e0e0e0;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#unitedstates-title-section {
-  color: #333333;
-  text-align: center;
-}
-
 .title-links-statueofliberty {
   color: #006994;
   text-decoration: none;
-}
-
-.paragraph-content-statueofliberty {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
 }
 
 .title-links-timesquare {
@@ -369,40 +285,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-timesquare {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
 .title-links-sanfrancisco {
   color: #006994;
   text-decoration: none;
-}
-.paragraph-content-sanfrancisco {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
-#canada-section {
-  background-color: #0f0e17;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#canada-title-section {
-  color: #e0e0e0;
-  text-align: center;
 }
 
 .title-links-niagarafalls {
@@ -410,25 +295,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-niagarafalls {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
 .title-links-ripleysaquarium {
   color: #ffd700;
   text-decoration: none;
-}
-
-.paragraph-content-ripleysaquarium {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
 }
 
 .title-links-whistler {
@@ -436,40 +305,9 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-whistler {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #e0e0e0;
-}
-
-#mexico-section {
-  background-color: #e0e0e0;
-  width: 100vw;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-}
-
-#mexico-title-section {
-  color: #333333;
-  text-align: center;
-}
-
 .title-links-chichenitza {
   color: #006994;
   text-decoration: none;
-}
-.paragraph-content-chichenitza {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
 }
 
 .title-links-cancun {
@@ -477,19 +315,20 @@ nav {
   text-decoration: none;
 }
 
-.paragraph-content-cancun {
-  text-align: justify;
-  word-wrap: break-word;
-  line-height: 1.6;
-  min-height: 150px;
-  color: #333333;
-}
-
 .title-links-museosoumaya {
   color: #006994;
   text-decoration: none;
 }
 
+/* ── Paragraph styles (all collapsed into two rules) ── */
+.paragraph-content-philippines,
+.paragraph-content-china,
+.paragraph-content-spain,
+.paragraph-content-statueofliberty,
+.paragraph-content-timesquare,
+.paragraph-content-sanfrancisco,
+.paragraph-content-chichenitza,
+.paragraph-content-cancun,
 .paragraph-content-museosoumaya {
   text-align: justify;
   word-wrap: break-word;
@@ -498,6 +337,24 @@ nav {
   color: #333333;
 }
 
+.paragraph-content-japan,
+.paragraph-content-fance,
+.paragraph-content-disneyland,
+.paragraph-content-louvre,
+.paragraph-content-italy,
+.paragraph-content-niagarafalls,
+.paragraph-content-ripleysaquarium,
+.paragraph-content-whistler {
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.6;
+  min-height: 150px;
+  color: #e0e0e0;
+}
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
 footer {
   padding: 10px 80px;
   border-top: 1px solid #d4cbc3;
@@ -514,4 +371,227 @@ footer {
 .footer-text {
   font-size: 14px;
   color: #666;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════════════════ */
+
+/* ── Large tablets / small laptops (≤ 1100px) ── */
+@media (max-width: 1100px) {
+  #hero-image {
+    width: 420px;
+    height: 420px;
+  }
+
+  #hero-heading {
+    font-size: 52px;
+  }
+
+  .article-content {
+    width: 380px;
+  }
+}
+
+/* ── Tablets (≤ 900px) ── */
+@media (max-width: 900px) {
+
+  /* Header */
+  header {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  #header-inside {
+    flex-direction: column;
+    gap: 8px;
+    padding: 6px 1rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  #nav-home {
+    padding-right: 0;
+  }
+
+  /* Hero — stack vertically */
+  #hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 80px 24px 48px;
+    min-height: auto;
+    gap: 32px;
+  }
+
+  #inside-hero-section {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  #hero-heading {
+    font-size: 42px;
+  }
+
+  #hero-subheading {
+    font-size: 17px;
+  }
+
+  #hero-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Cards: 2 per row */
+  .article-container {
+    gap: 24px;
+  }
+
+  .article-content {
+    width: calc(50% - 12px);
+  }
+
+  .article-image-black,
+  .article-image-white {
+    height: 220px;
+  }
+
+  /* Section padding */
+  #philippines-section,
+  #japan-section,
+  #china-section,
+  #france-section,
+  #spain-section,
+  #italy-section,
+  #unitedstates-section,
+  #canada-section,
+  #mexico-section {
+    padding: 48px 16px;
+    min-height: auto;
+  }
+
+  footer {
+    padding: 10px 24px;
+  }
+}
+
+/* ── Phones (≤ 600px) ── */
+@media (max-width: 600px) {
+
+  /* Header — tighter */
+  #logo-name {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 50px;
+    height: 42px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  .nav-options {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  #nav-home {
+    font-size: 14px;
+  }
+
+  /* Hero */
+  #home {
+    padding-top: 0;
+  }
+
+  #hero-section {
+    padding: 70px 16px 36px;
+    gap: 24px;
+  }
+
+  #hero-heading {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  #hero-subheading {
+    font-size: 15px;
+  }
+
+  #contact-me {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #hero-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Cards: 1 per row, full width */
+  .article-content {
+    width: 100%;
+  }
+
+  .article-image-black,
+  .article-image-white {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .article-container {
+    gap: 32px;
+    padding: 12px 0;
+  }
+
+  /* Paragraph min-height not needed on mobile — remove so it doesn't add empty space */
+  .paragraph-content-philippines,
+  .paragraph-content-china,
+  .paragraph-content-spain,
+  .paragraph-content-statueofliberty,
+  .paragraph-content-timesquare,
+  .paragraph-content-sanfrancisco,
+  .paragraph-content-chichenitza,
+  .paragraph-content-cancun,
+  .paragraph-content-museosoumaya,
+  .paragraph-content-japan,
+  .paragraph-content-fance,
+  .paragraph-content-disneyland,
+  .paragraph-content-louvre,
+  .paragraph-content-italy,
+  .paragraph-content-niagarafalls,
+  .paragraph-content-ripleysaquarium,
+  .paragraph-content-whistler {
+    min-height: unset;
+  }
+
+  footer {
+    padding: 10px 16px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
+
+/* ── Very small phones (≤ 380px) ── */
+@media (max-width: 380px) {
+  #hero-heading {
+    font-size: 26px;
+  }
+
+  #hero-image {
+    width: 170px;
+    height: 170px;
+  }
+
+  .nav-options {
+    width: 68px;
+    font-size: 13px;
+  }
 }
